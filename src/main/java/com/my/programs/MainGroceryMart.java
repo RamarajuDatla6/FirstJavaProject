@@ -26,7 +26,7 @@ public class MainGroceryMart {
 
         GrocMart newAcc = new GrocMart("NewCustomer","#12123","56556");
         System.out.println(newAcc.getCustname());
-        System.out.println(newAcc.getAccbal()k);
+        System.out.println(newAcc.getAccbal());
 
 
         myAccount.shop(498.52);

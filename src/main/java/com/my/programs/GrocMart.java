@@ -1,7 +1,7 @@
 package com.my.programs;
 
 public class GrocMart {
-    private String custName;
+    private String custname;
     private String custid;
     private String custphno;
     private double accbal;
@@ -15,7 +15,7 @@ public class GrocMart {
 
     GrocMart(String custname,String custid,String custphno,double accbal,String address){
         // setCustid(custid);     we can alsodo this.But if we miss any parameters it is difficult to identify them
-        this.custName = custname;
+        this.custname = custname;
         this.custid = custid;
         this.custphno = custphno;
         this.accbal = accbal;
