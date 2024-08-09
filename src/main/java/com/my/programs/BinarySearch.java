@@ -5,6 +5,7 @@ public class BinarySearch {
         int[] arr = {4,6,7,13,15,16,17,22,32};
         int key = 22;
         int result = searchKey(arr,key);
+        System.out.println("Key is found at the index "+result);
     }
 
     public static int searchKey(int[] arr,int key){
@@ -13,13 +14,21 @@ public class BinarySearch {
         int found = -1;
 
         while (low <= high){
-            int mid = (low - high)/2;
+            int mid = low+(high-low)/2;
 
-            if( mid == key){
-                found = 1;
+            if( arr[mid] == key){
+                found = mid;
+              //  break;
             }
-
-            if ()
+            if (arr[mid] < key){
+                low = mid + 1;
+            }else {
+                high = mid -1;
+            }
         }
+        if (found == -1){
+            System.out.println("Element not found");
+        }
+        return found;
     }
 }
