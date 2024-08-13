@@ -34,6 +34,7 @@ public class LinkedList1 {
         printList(engAlphabet);
 
         engAlphabet.remove(2);
+
     }
 
 
@@ -43,5 +44,27 @@ public class LinkedList1 {
             System.out.println("Printing : "+i.next());
         }
         System.out.println("................");
+    }
+
+
+    public static boolean addInAscOrder(LinkedList<String> linking, String newword){
+        ListIterator <String> stringListIterator = linking.listIterator();
+
+        while (stringListIterator.hasNext()){
+            int compare = stringListIterator.next().compareTo(newword);
+
+            if (compare == 0){
+                System.out.println("Word already exists");
+                return false;
+            } else if (compare > 0) {
+                stringListIterator.previous();
+                stringListIterator.add(newword);
+                return true;
+            } else if (compare < 0) {
+                return true;
+            }
+        }
+        stringListIterator.add(newword);
+        return true;
     }
 }
