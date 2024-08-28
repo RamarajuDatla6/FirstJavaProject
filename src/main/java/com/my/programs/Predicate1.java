@@ -11,5 +11,6 @@ public class Predicate1 {
         Predicate<String> pred =Predicate.isEqual("Vijay");
         System.out.println(pred.test("vijay"));
         System.out.println("hi");
+        System.out.println("hello");
     }
 }
